@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="container-fluid ">
+<div class="row">
+<div class="col-md-6 offset-md-3">
+  <form id="addmovie" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  <h1>Add Movie</h1>
+  <div class="form-group">
+    <label for="name">Movie Name </label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+
+  </div>
+  <div class="form-group">
+     <label for="year">Year </label>
+    <input type="text" class="form-control" id="year" name="year" placeholder="Enter Year">
+  </div>
+
+    <div class="form-group">
+     <label for="image">Image </label>
+     <input type="file" id="image" name="img">
+   </div>
+
+  <div class="form-group">
+     <label for="desc">Description </label>
+    <input type="text" class="form-control" id="desc" name="desc" placeholder="Enter description">
+  </div>
+  <button type="submit" class="btn btn-success btn-block">Add</button>
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+<!--<div style="margin-top:100px">-->
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--  {% csrf_token %}-->
+<!--    <input type="text" name="name" placeholder="Enter Name"><br>-->
+<!--    <input type="text" name="desc" placeholder="Enter desc"><br>-->
+<!--    <input type="file" name="img"><br>-->
+<!--    <input type="text" name="year" placeholder="Enter Year"><br>-->
+<!--    <input type="submit">-->
+
+<!--</form>-->
+<!--</div>-->
+{% endblock %}
